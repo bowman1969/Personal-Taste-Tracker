@@ -37,9 +37,9 @@ for (let i = 0; i < favoriteFoods.length; i++) {
 
 // 4b. Call the function at least 3 times
 
-printFoodRecommendation("Pizza")
-printFoodRecommendation("Pasta")
-printFoodRecommendation("Tacos")
+printFoodRecommendation("Pizza");
+printFoodRecommendation("Pasta");
+printFoodRecommendation("Tacos");
 
 
 
@@ -52,8 +52,8 @@ let friendFavorites = [
 
 for (let i =0; i < friendFavorites.length; i++) {
   if (friendFavorites[i].toLowerCase().includes("a")) {
-    console.log(friendFavorites[i])}
-  
+    console.log(friendFavorites[i]);
+  }
 }
 
 // 6. Store the result in an array called foodsWithA. Print out the array.
@@ -61,27 +61,64 @@ for (let i =0; i < friendFavorites.length; i++) {
 function loopRecall(friendFavorites) {
   let results = [];
 
-  for (let i ="0"; < friendFavorites.length; i++); {
+  for (let i = 0; i < friendFavorites.length; i++) {
     if (friendFavorites[i].toLowerCase().includes("a")) {
-      results.push(friendFavorites[i])
+      results.push(friendFavorites[i]);
     }
   }
   return results;
 }
 
-let foodsWithA = 
+let foodsWithA = loopRecall(friendFavorites);
+
+console.log(foodsWithA);
 
 
 // 7. Create a new array longFoodNames for foods with names longer than 6 characters.
 
+let longFoodNames =[]
 
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > 6)
+    longFoodNames.push(friendFavorites[i]);
+}
 
 // 8. Create another array shortFoodNames for foods 6 characters or shorter.
 
+let shortFoodNames =[]
 
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length <= 6)
+    shortFoodNames.push(friendFavorites[i]);
+}
 
 // 9. Print both arrays and compare:
 // "There are more long-named foods." OR "There are more short-named foods."
+
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length > 6) {
+    longFoodNames.push(friendFavorites[i]);
+  }
+}
+
+for (let i = 0; i < friendFavorites.length; i++) {
+  if (friendFavorites[i].length <= 6) {
+    shortFoodNames.push(friendFavorites[i]);
+  }
+}
+
+console.log(longFoodNames);
+console.log(shortFoodNames);
+
+function compareFoods(longFoods, shortFoods) {
+  if (longFoods.length > shortFoods.length) {
+    console.log("There are more long-named foods.");
+  } else {
+    console.log("There are more short-named foods.");
+  }
+}
+
+  compareFoods(longFoodNames, shortFoodNames);
 
 
 // 10. STRETCH: Find the longest food name and print:
